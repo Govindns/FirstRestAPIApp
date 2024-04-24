@@ -1,0 +1,17 @@
+.conatainer{
+    background: #43d2d2;
+    height: 200px   ;
+    width: 700px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+   box-shadow: 1px 1px 10px red;
+}
+
+table{
+    font-size: 30px;
+    background: cyan;
+    color: #071dab;
+}

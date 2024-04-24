@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bnglore Jobs</title>
+     <link rel="stylesheet" href="{% static 'css/jobs1.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<br>&nbsp;&nbsp;&nbsp;
+<a href="/" class="btn btn-success btn-lg">Home</a>
+<br><br>
+<h2 style="font-size:50px; color:red;"> Benglore Jobs Portal </h2> <br>
+   {% if my_list %}
+    <table class="table table-dark table-striped">
+        <thead>
+            <th> Date</th>
+            <th> Company</th>
+            <th> Title</th>
+            <th> Address</th>
+            <th> Email</th>
+             <th> Phone No.</th>
+        </thead>
+    {% for job in my_list %}
+        <tr>
+            <td>{{job.date}}</td>
+             <td>{{job.company}}</td>
+             <td>{{job.title}}</td>
+             <td>{{job.address}}</td>
+             <td>{{job.email}}</td>
+             <td>{{job.phonenumber}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+        <p> No Jobs In Benglore....</p>
+    {% endif %}
+</body>
+</html>
